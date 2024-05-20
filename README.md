@@ -1,2 +1,2 @@
-# memo_panel
-Note Taking App
+# memo panel
+Note Taking Web App
