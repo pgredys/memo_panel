@@ -1,2 +1,8 @@
-# memo_panel
-Note Taking App
+# memo panel
+Note Taking Web App
+
+## To-Dos:
+- deployment
+- deleting notes
+- markdown support
+- css update &  local store
