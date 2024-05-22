@@ -5,18 +5,20 @@
   {% for note in user.notes %}
   <div class="card">
         <div class="card-body">
-            <span class="badge badge-default">{{ note.date }}</span>
-            <button type="button" class="close" onClick="deleteNote({{ note.id }})">
-            <span aria-hidden="true">&times;</span></button>
+            <span class="badge badge-primary">{{ note.date }}</span>
+                <button type="button" class="close" style="float: right;"
+                        onClick="deleteNote({{note.id}})">
+                <span aria-hidden="true">&times;</span></button>
+                <p>{{ note.data |safe }}</p>
 
-            <p>{{ note.data |safe }}</p>
+                <button type="button" style="float: right;" class="btn btn-sm">🛠️</button>
         </div>
     </div>
 
   {% endfor %}
 </ul>
 <form method="POST">
-  <textarea name="note" id="note" class="form-control" rows="5" ></textarea>
+    <label for="note"></label><textarea name="note" id="note" class="form-control"></textarea>
   <br />
   <div align="center">
     <button type="submit" class="btn btn-primary">Add Note</button>
